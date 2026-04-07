@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #F5F2EB;
+  color: #1A1A1A;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav_bar nav_bar"
+    "main main"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E8E4DC;
+}
+
+.nav_bar {
+  grid-area: nav_bar;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E8E4DC;
+}
+
+.nav_bar a {
+  text-decoration: none;
+  color: #5A5550;
+  font-weight: 400;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav_bar a:hover {
+  border-color: #E8E4DC;
+  background-color: #E8E4DC;
+}
+
+.nav_bar .icon {
+  display: none;
+  background-color: #FFFFFF;
+  color: #5A5550;
+  border: 1px solid #E8E4DC;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  width: auto;
+}
+
+.active {
+  color: #1A1A1A;
+  font-weight: 600;
+  background-color: #E8E4DC;
+}
+
+#logo {
+  width: 18%;
+  min-width: 120px;
+  display: block;
+  margin: 10px auto;
+  background-color: transparent;
+}
+
+.main,
+main {
+  grid-area: main;
+  padding: 20px;
+  background-color: #F5F2EB;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+p,
+li,
+label,
+td,
+th {
+  color: #1A1A1A;
+}
+
+.cta,
+#readMore,
+#readLess,
+button {
+  display: inline-block;
+  background-color: #B8860B;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: 2px solid #B8860B;
+  cursor: pointer;
+}
+
+.cta:hover,
+#readMore:hover,
+#readLess:hover,
+button:hover {
+  background-color: #9A7209;
+  color: #FFFFFF;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  background-color: #FFFFFF;
+}
+
+th,
+td {
+  border-bottom: 1px solid #E8E4DC;
+  padding: 10px;
+  text-align: left;
+  background-color: #FFFFFF;
+}
+
+th {
+  background-color: #E8E4DC;
+  font-weight: 500;
+}
+
+tr:nth-child(even) td {
+  background-color: #F8F6F1;
+}
+
+form {
+  max-width: 550px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #E8E4DC;
+  border-radius: 8px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input,
+button {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #E8E4DC;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+}
+
+#longIntro,
+#readLess,
+#purchaseForm {
+  display: none;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  margin-top: 12px;
+}
+
+#map {
+  width: 100%;
+  height: 350px;
+  margin-top: 16px;
+  border: 1px solid #E8E4DC;
+  border-radius: 8px;
+}
+
+.footer,
+footer {
+  grid-area: footer;
+  border-top: 1px solid #E8E4DC;
+  padding: 18px 16px;
+  text-align: center;
+  color: #5A5550;
+  background-color: #E8E0D3;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav_bar"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  #logo {
+    width: 35%;
+  }
+
+  .main,
+  main {
+    padding: 16px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .nav_bar {
+    justify-content: flex-start;
+  }
+
+  .nav_bar a {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav_bar .icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav_bar.responsive {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav_bar.responsive a {
+    display: block;
+  }
+
+  .nav_bar.responsive .icon {
+    align-self: flex-end;
+  }
+}

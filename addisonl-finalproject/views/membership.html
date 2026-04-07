@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - MonoMuse</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="site-logo">
+      <img src="../static/images/logo.png" alt="MonoMuse">
+    </a>
+  </header>
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="exhibitions.html">Exhibitions</a></li>
+      <li><a href="tickets.html">Buy Tickets</a></li>
+      <li><a href="membership.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <main class="membership-grid">
+    <section class="mem-overview">
+      <h1>Become a MonoMuse Member</h1>
+      <p>Join a community of art lovers and get closer to the work that inspires you. MonoMuse members enjoy year-round benefits that make every visit more rewarding, from discounted admission and exclusive previews to member-only events.</p>
+
+      <h2>Member Benefits</h2>
+      <ul>
+        <li>Early access to new exhibitions before public opening</li>
+        <li>Invitations to member-only events and artist talks</li>
+        <li>10% discount at the MonoMuse Shop and Café</li>
+        <li>10% discount for admission for general members</li>
+        <li>Monthly newsletter with behind-the-scenes content</li>
+      </ul>
+    </section>
+
+    <section class="mem-tiers">
+      <h2>Membership Tiers</h2>
+
+      <article class="tier-card">
+        <h3>Student</h3>
+        <p class="tier-price">$20 / year</p>
+        <p>Perfect for full-time students. Enjoy discounted admission, exhibition previews, and student-exclusive workshops. Valid student ID required.</p>
+      </article>
+
+      <article class="tier-card">
+        <h3>Regular</h3>
+        <p class="tier-price">$50 / year</p>
+        <p>Regular membership. Includes all core benefits plus priority registration for special events.</p>
+      </article>
+    </section>
+
+    <section class="mem-form-section">
+      <h2>Apply for Membership</h2>
+
+      <form id="membership-form" novalidate>
+
+        <div class="form-group">
+          <label for="mem-first-name">First Name <span class="required-mark">*</span></label>
+          <span class="error-msg" id="mem-first-name-error"></span>
+          <input type="text" id="mem-first-name" name="first-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mem-last-name">Last Name <span class="required-mark">*</span></label>
+          <span class="error-msg" id="mem-last-name-error"></span>
+          <input type="text" id="mem-last-name" name="last-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mem-email">Email <span class="required-mark">*</span></label>
+          <span class="error-msg" id="mem-email-error"></span>
+          <input type="email" id="mem-email" name="email" placeholder="example@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mem-type">Membership Type <span class="required-mark">*</span></label>
+          <span class="error-msg" id="mem-type-error"></span>
+          <select id="mem-type" name="membership-type" required>
+            <option value="">- Select a tier -</option>
+            <option value="student">Student - $20/year</option>
+            <option value="regular">Regular - $50/year</option>
+          </select>
+        </div>
+
+        <div class="form-group form-group--checkbox">
+          <input type="checkbox" id="mem-mailing-list" name="mailing-list">
+          <label for="mem-mailing-list">Join our mailing list</label>
+        </div>
+
+        <button type="submit" class="panel-btn" id="mem-submit-btn">Submit Application</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>1060 Morewood Avenue, Pittsburgh, PA 15213</p>
+      <p>Phone: <a href="tel:+14125551234">(412) 555-1234</a></p>
+      <p>Email: <a href="mailto:hello@monomuse.org">hello@monomuse.org</a></p>
+      <p class="copyright">&copy; 2026 MonoMuse Contemporary Art Museum. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="Buy tickets">
+  <title>Buy Tickets</title>
+
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="../static/logo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar">
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+
+    <main class="main">
+      <h1>Buy Tickets</h1>
+
+      <h3>Ticket Prices</h3>
+      <table>
+        <tr>
+          <th>Ticket Type</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>General</td>
+          <td>Standard admission for one adult visitor.</td>
+          <td>$18</td>
+        </tr>
+        <tr>
+          <td>Student</td>
+          <td>Discounted admission for students with valid ID.</td>
+          <td>$13.50</td>
+        </tr>
+        <tr>
+          <td>Member</td>
+          <td>Discounted admission for annual MonoMuse members.</td>
+          <td>$16.20</td>
+        </tr>
+      </table>
+
+      <h3>Available April Dates</h3>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>April 12</td>
+          <td>Available</td>
+          <td><button type="button" onclick="showPurchaseForm('April 12')">Buy Now</button></td>
+        </tr>
+        <tr>
+          <td>April 19</td>
+          <td>Available</td>
+          <td><button type="button" onclick="showPurchaseForm('April 19')">Buy Now</button></td>
+        </tr>
+        <tr>
+          <td>April 26</td>
+          <td>Available</td>
+          <td><button type="button" onclick="showPurchaseForm('April 26')">Buy Now</button></td>
+        </tr>
+      </table>
+
+      <form id="purchaseForm">
+        <h3>Purchase Form</h3>
+
+        <label for="ticketName">Name:</label><br>
+        <input type="text" id="ticketName" name="ticketName" required><br><br>
+
+        <label for="ticketEmail">Email:</label><br>
+        <input type="email" id="ticketEmail" name="ticketEmail" required><br><br>
+
+        <label for="ticketQuantity">Number of Tickets:</label><br>
+        <input type="number" id="ticketQuantity" name="ticketQuantity" min="1" required><br><br>
+
+        <label for="selectedDate">Selected Date:</label><br>
+        <input type="text" id="selectedDate" name="selectedDate" readonly required><br><br>
+
+        <button type="submit" onclick="redirectToPayment(event)">Submit</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

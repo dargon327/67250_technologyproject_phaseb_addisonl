@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MonoMuse - Contemporary Art Museum</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="site-logo">
+      <img src="static/images/logo.png" alt="MonoMuse">
+    </a>
+  </header>
+
+ 
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="views/about.html">About</a></li>
+      <li><a href="views/exhibitions.html">Exhibitions</a></li>
+      <li><a href="views/tickets.html">Buy Tickets</a></li>
+      <li><a href="views/membership.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <main class="home-grid">
+
+    <h1 class="home-title">MonoMuse</h1>
+
+    <section class="gallery" aria-label="Featured image gallery">
+      <button class="gallery-btn gallery-btn--left" aria-label="Previous image">&#8592;</button>
+
+      <div class="gallery-image-wrapper">
+        <div class="gallery-slide active"
+             data-description="Alma Thomas was a pioneering abstract expressionist known for her vibrant, mosaic-like paintings inspired by nature and space. Come visit now at MonoMuse">
+          <img src="static/images/alma_thomas_gallery_image.jpg" alt="Painting by Alma Thomas featuring vibrant mosaic-like patterns of color">
+        </div>
+
+        <div class="gallery-slide"
+             data-description="Explore the Francis Bacon: Figures in Motion exhibition. This video previews Bacon's raw, emotionally charged figurative works - his distorted human forms, bold brushwork, and intense use of color that defined 20th-century expressionism.">
+          <iframe
+            src="https://www.youtube.com/embed/S7lWGCBD4JE"
+            title="Francis Bacon exhibition preview video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="gallery-slide"
+             data-description="Discover Andy Warhol: Beyond the Surface. This video takes you inside the exhibition celebrating Pittsburgh's own Pop Art icon - from his famous silkscreens to his lesser-known experiments in film, sculpture, and collaborative art.">
+          <iframe
+            src="https://www.youtube.com/embed/ekGySlb2iyQ"
+            title="Andy Warhol exhibition preview video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <button class="gallery-btn gallery-btn--right" aria-label="Next image">&#8594;</button>
+    </section>
+
+    <p class="gallery-description" id="gallery-description">Alma Thomas (1891–1978) was a pioneering abstract expressionist known for her vibrant, mosaic-like paintings inspired by nature and space. Her joyful use of color broke new ground for African American women in the art world.</p>
+
+    <section class="overview">
+      <h2>Welcome to MonoMuse</h2>
+      <p>MonoMuse is a contemporary art museum dedicated to showcasing the full spectrum of creative expression. From paintings and sculpture to digital media and immersive installations, our rotating exhibitions feature emerging and established artists from around the world. Whether you are a seasoned collector or stepping into a gallery for the first time, MonoMuse offers experiences that inspire curiosity, spark conversation, and connect communities.</p>
+    </section>
+
+    <!-- Panel 1: About (top left) -->
+    <aside class="panel panel-1">
+      <h2>About</h2>
+      <p>Discover our mission, find directions to the museum, and get in touch with our team.</p>
+      <a href="views/about.html" class="panel-btn">Learn More</a>
+    </aside>
+
+    <!-- Panel 2: Exhibitions (top right) -->
+    <aside class="panel panel-2">
+      <h2>Exhibitions</h2>
+      <p>Explore our current exhibitions featuring works in painting, sculpture, digital media, and more.</p>
+      <a href="views/exhibitions.html" class="panel-btn">View Exhibitions</a>
+    </aside>
+
+    <!-- Panel 3: Buy Tickets (bottom left) -->
+    <aside class="panel panel-3">
+      <h2>Buy Tickets</h2>
+      <p>Purchase general, student, or member tickets online and secure your entry before arriving.</p>
+      <a href="views/tickets.html" class="panel-btn">Get Tickets</a>
+    </aside>
+
+    <!-- Panel 4: Sign Up (bottom right) -->
+    <aside class="panel panel-4">
+      <h2>Sign Up</h2>
+      <p>Enjoy discounted admission, exclusive previews, and member-only events. Memberships start at $50/year.</p>
+      <a href="views/membership.html" class="panel-btn">Join Us</a>
+    </aside>
+
+   
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">What are the museum's hours?</button>
+        <div class="faq-answer">
+          <p>MonoMuse is open Tuesday through Sunday. Hours are 10:00 AM - 6:00 PM on weekdays (until 9:00 PM on Fridays) and 10:00 AM – 7:00 PM on weekends. The museum is closed on Mondays.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How much is admission?</button>
+        <div class="faq-answer">
+          <p>Adult guest tickets are $18, adult member tickets are $16.20, student member tickets are $13.50, and child tickets are $9.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is there parking available?</button>
+        <div class="faq-answer">
+          <p>Street parking is available along Morewood Avenue, and the nearby Carnegie Mellon Carpark offers hourly and daily rates.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How do I become a member?</button>
+        <div class="faq-answer">
+          <p>Visit our <a href="views/membership.html">Sign Up page</a> to apply. We offer Student ($20/year) and Regular ($50/year) memberships. Student membership requires a valid student ID.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I buy tickets online?</button>
+        <div class="faq-answer">
+          <p>Yes! Visit our <a href="views/tickets.html">Buy Tickets page</a> to purchase tickets in advance. All tickets are valid for the full day of your visit.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>1060 Morewood Avenue, Pittsburgh, PA 15213</p>
+      <p>Phone: <a href="tel:+14125551234">(412) 555-1234</a></p>
+      <p>Email: <a href="mailto:hello@monomuse.org">hello@monomuse.org</a></p>
+      <p class="copyright">&copy; 2026 MonoMuse Contemporary Art Museum. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="static/script.js"></script>
+</body>
+</html>

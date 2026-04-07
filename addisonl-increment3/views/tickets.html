@@ -6,23 +6,30 @@
   <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
   <meta name="description" content="Buy tickets">
   <title>Buy Tickets</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="../static/script.js" defer></script>
+  <link rel="stylesheet" href="../static/style.css">
 </head>
-<body>
+<body onload="addYear()">
   <header>
-    <h1>MonoMuse</h1>
     <nav>
       <a href="../index.html">Home</a>
       <a href="explore.html">Explore</a>
       <a href="exhibitions.html">Exhibitions</a>
-      <a href="tickets.html">Tickets</a>
+      <a id="navselected" href="tickets.html">Tickets</a>
       <a href="checkout.html">Checkout</a>
     </nav>
   </header>
 
+  <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+
   <main>
     <h1>Buy Tickets</h1>
 
-    <table border="1">
+    <table>
       <tr>
         <th>Ticket Type</th>
         <th>Description</th>
@@ -36,18 +43,18 @@
       <tr>
         <td>Student</td>
         <td>Discounted admission for students with valid ID.</td>
-        <td>$13.5</td>
+        <td>$13.50</td>
       </tr>
       <tr>
         <td>Member</td>
         <td>Discounted admission for annual MonoMuse members.</td>
-        <td>$16.2</td>
+        <td>$16.20</td>
       </tr>
     </table>
   </main>
 
   <footer>
-    <p>&copy; 2026 MonoMuse. All rights reserved.</p>
+    <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
   </footer>
 </body>
 </html>

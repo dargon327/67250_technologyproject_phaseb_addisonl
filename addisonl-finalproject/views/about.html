@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - MonoMuse</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+
+  <header class="site-header">
+    <a href="../index.html" class="site-logo">
+      <img src="../static/images/logo.png" alt="MonoMuse">
+    </a>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="exhibitions.html">Exhibitions</a></li>
+      <li><a href="tickets.html">Buy Tickets</a></li>
+      <li><a href="membership.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <main class="about-grid">
+
+    <section class="about-overview">
+      <h1>About MonoMuse</h1>
+      <p>MonoMuse is a contemporary art museum in the heart of Pittsburgh, dedicated to showcasing the full spectrum of creative expression. We bring together emerging and established artists working across painting, sculpture, photography, digital media, and immersive installations.</p>
+
+      <h2>Our Mission</h2>
+      <p>To make art accessible, engaging, and meaningful for all. MonoMuse is committed to creating experiences that inspire curiosity, spark dialogue, and strengthen the bond between art and community.</p>
+
+      <h2>Our Vision</h2>
+      <p>We envision a world where every person - regardless of background or experience - can find connection, meaning, and joy through art. MonoMuse strives to be a space where diverse perspectives are celebrated and creative expression is a shared language.</p>
+
+      <h3>Collection Highlights</h3>
+      <p>Our rotating exhibitions feature a wide range of works, including large-scale immersive installations, mixed-media sculptures, contemporary photography, and interactive digital pieces. Recent highlights include a light-based installation series by six international artists and a groundbreaking exhibit exploring sound as physical form.</p>
+    </section>
+
+    <section class="about-exhibit-text">
+      <h2>Current Exhibitions</h2>
+      <article>
+        <h3>Francis Bacon: Figures in Motion</h3>
+        <p>This exhibition presents a rare collection of Francis Bacon's most striking figurative works, exploring themes of isolation, raw emotion, and the distortion of the human form. Visitors will experience Bacon's intense use of color and brushwork up close.</p>
+      </article>
+      <article>
+        <h3>Andy Warhol: Beyond the Surface</h3>
+        <p>Celebrating Pittsburgh's own Andy Warhol, this exhibition goes beyond the iconic Campbell's Soup Cans to explore Warhol's lesser-known experiments in film, sculpture, and collaborative art. A must-see for anyone interested in the intersection of art and popular culture.</p>
+      </article>
+      <a href="exhibitions.html" class="panel-btn">View All Exhibitions</a>
+    </section>
+
+    <figure class="about-exhibit-img">
+      <img src="../static/images/exhibition_image.jpg" alt="Featured artwork from the current MonoMuse exhibition">
+      <figcaption>A preview of works featured in our current 20th Century Art exhibition cycle, showcasing pieces by Francis Bacon and Andy Warhol.</figcaption>
+    </figure>
+
+    <section class="about-history">
+      <h2>Our History</h2>
+      <p>MonoMuse was founded in 2018 by a group of Pittsburgh artists and educators who believed their city deserved a museum that reflected the energy and diversity of contemporary art. What began as a series of pop-up exhibitions in repurposed warehouses grew into a permanent institution within two years.</p>
+      <p>The museum opened its doors at its current location on Morewood Avenue in 2020, occupying a renovated mid-century building that blends industrial architecture with modern gallery design.</p>
+    </section>
+
+    <section class="about-highlights">
+      <h2>Major Milestones</h2>
+      <ul>
+        <li><strong>2018</strong> - MonoMuse founded; first pop-up exhibition draws 800 visitors</li>
+        <li><strong>2019</strong> - Partnership with Carnegie Mellon University for student artist residency program</li>
+        <li><strong>2020</strong> - Permanent location opens on Morewood Avenue</li>
+        <li><strong>2022</strong> - Annual attendance surpasses 50,000 visitors</li>
+        <li><strong>2024</strong> - Awarded the Pittsburgh Cultural Trust Award for Innovation in the Arts</li>
+        <li><strong>2025</strong> - Launch of the MonoMuse Digital Gallery, bringing exhibitions online</li>
+      </ul>
+    </section>
+
+    <aside class="about-tickets">
+      <h2>Plan Your Visit</h2>
+      <p>General admission is $18 per person. Students and members enjoy discounted entry. Purchase your tickets online to secure entry before arriving.</p>
+      <a href="tickets.html" class="panel-btn">Buy Tickets</a>
+    </aside>
+
+    <aside class="about-signup">
+      <h2>Sign Up!</h2>
+      <p>Become a member and enjoy discounted admission, exclusive exhibition previews, and member-only events. Memberships start at just $50/year.</p>
+      <a href="membership.html" class="panel-btn">Join Us</a>
+    </aside>
+
+    <section class="about-map">
+      <h2>Find Us</h2>
+      <div id="map" class="leaflet-map"></div>
+    </section>
+
+    <section class="about-directions">
+      <h2>Getting Here</h2>
+      <address>
+        <p><strong>MonoMuse Contemporary Art Museum</strong></p>
+        <p>1060 Morewood Avenue</p>
+        <p>Pittsburgh, PA 15213</p>
+      </address>
+
+      <h3>By Bus</h3>
+      <p>Take the 61A, 61B, 61C, or 71B to Forbes and Morewood. The museum is a one-minute walk from the stop.</p>
+
+      <h3>By Car</h3>
+      <p>From I-376, take the Oakland/Forbes Avenue exit. Head east on Forbes Avenue, then turn left onto Morewood Avenue. The museum is on your right.</p>
+
+      <h3>Parking</h3>
+      <p>Street parking is available along Morewood Avenue. The nearby Morewood Parking Garage offers hourly and daily rates. Free parking is available on weekends.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>1060 Morewood Avenue, Pittsburgh, PA 15213</p>
+      <p>Phone: <a href="tel:+14125551234">(412) 555-1234</a></p>
+      <p>Email: <a href="mailto:hello@monomuse.org">hello@monomuse.org</a></p>
+      <p class="copyright">&copy; 2026 MonoMuse Contemporary Art Museum. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>

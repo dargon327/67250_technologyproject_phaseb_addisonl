@@ -10,10 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
-
+  <script src="./static/script.js" defer></script>
   <link rel="stylesheet" href="./static/style.css">
 </head>
-<body>
+<body onload="addYear()">
   <header>
     <nav>
       <a id="navselected" href="index.html">Home</a>
@@ -27,7 +27,7 @@
   <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo">
 
   <div class="main">
-    <h2>Welcome to MonoMuse</h2>
+    <h2 id="greeting">Welcome to MonoMuse</h2>
     <p>
       MonoMuse is a contemporary museum dedicated to exploring the intersection of art,
       technology, and human creativity. Through immersive exhibitions, interactive
@@ -43,7 +43,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 MonoMuse. All rights reserved.</p>
+    <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
   </footer>
 </body>
 </html>

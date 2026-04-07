@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation - MonoMuse</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="../index.html" class="site-logo">
+      <img src="../static/images/logo.png" alt="MonoMuse">
+    </a>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="exhibitions.html">Exhibitions</a></li>
+      <li><a href="tickets.html">Buy Tickets</a></li>
+      <li><a href="membership.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <main class="confirmation-content">
+    <section class="confirmation-box">
+      <h1>Order Confirmed!</h1>
+      <p>Thank you for your purchase. Your tickets have been reserved. Please present this confirmation at the museum entrance.</p>
+
+      <h2>Order Summary</h2>
+      <p><strong>Tickets:</strong> <span id="conf-tickets"></span></p>
+      <p><strong>Visit Date:</strong> <span id="conf-date"></span></p>
+      <p><strong>Quantity:</strong> <span id="conf-quantity"></span></p>
+      <p><strong>Email:</strong> <span id="conf-email"></span></p>
+      <p class="conf-total"><strong>Total: <span id="conf-total"></span></strong></p>
+
+      <a href="tickets.html" class="panel-btn">Buy More Tickets</a>
+      <a href="../index.html" class="panel-btn">Return Home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>1060 Morewood Avenue, Pittsburgh, PA 15213</p>
+      <p>Phone: <a href="tel:+14125551234">(412) 555-1234</a></p>
+      <p>Email: <a href="mailto:hello@monomuse.org">hello@monomuse.org</a></p>
+      <p class="copyright">&copy; 2026 MonoMuse Contemporary Art Museum. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>

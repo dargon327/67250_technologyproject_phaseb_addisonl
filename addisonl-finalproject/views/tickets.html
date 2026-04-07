@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Tickets - MonoMuse</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="site-logo">
+      <img src="../static/images/logo.png" alt="MonoMuse">
+    </a>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="exhibitions.html">Exhibitions</a></li>
+      <li><a href="tickets.html">Buy Tickets</a></li>
+      <li><a href="membership.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <main class="tickets-grid">
+    <section class="tix-form-section">
+      <h1>Buy Tickets</h1>
+      <p class="form-subtitle">All tickets are valid for the full day of your visit.</p>
+      <form id="ticket-form" novalidate>
+        <div class="form-group">
+          <label>Select Tickets</label>
+          <span class="error-msg" id="ticket-qty-error"></span>
+          <div class="ticket-qty-row">
+            <div class="ticket-qty-box">
+              <label for="qty-adult-guest">Adult Guest<br><strong>$18.00</strong></label>
+              <input type="number" id="qty-adult-guest" name="qty-adult-guest" min="0" max="10" value="0">
+            </div>
+            <div class="ticket-qty-box">
+              <label for="qty-adult-member">Adult Member<br><strong>$16.20</strong></label>
+              <input type="number" id="qty-adult-member" name="qty-adult-member" min="0" max="10" value="0">
+            </div>
+            <div class="ticket-qty-box">
+              <label for="qty-student-member">Student Member<br><strong>$13.50</strong></label>
+              <input type="number" id="qty-student-member" name="qty-student-member" min="0" max="10" value="0">
+            </div>
+            <div class="ticket-qty-box">
+              <label for="qty-child">Child<br><strong>$9.00</strong></label>
+              <input type="number" id="qty-child" name="qty-child" min="0" max="10" value="0">
+            </div>
+          </div>
+        </div>
+        <!-- Date-->
+        <div class="form-group">
+          <label for="visit-date">Visit Date</label>
+          <span class="error-msg" id="visit-date-error"></span>
+          <input type="date" id="visit-date" name="visit-date" required>
+        </div>
+
+        <!-- Total Price -->
+        <div class="form-group">
+          <p class="price-display">Total: <strong id="total-price">$0.00</strong></p>
+        </div>
+
+        <p class="form-note">Member identification and/or age verification will be required when entering the Museum.</p>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required-mark">*</span></label>
+          <span class="error-msg" id="email-error"></span>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="zipcode">Zip Code <span class="optional-mark">(optional)</span></label>
+          <span class="error-msg" id="zipcode-error"></span>
+          <input type="text" id="zipcode" name="zipcode" placeholder="15213" maxlength="5">
+        </div>
+
+        <div class="form-group form-group--checkbox">
+          <input type="checkbox" id="mailing-list" name="mailing-list">
+          <label for="mailing-list">Join our mailing list</label>
+        </div>
+
+        <button type="submit" class="panel-btn" id="place-order-btn">Place Order</button>
+
+      </form>
+    </section>
+
+    <aside class="tix-info-section">
+
+      <h2>Ticket Pricing</h2>
+      <table class="info-table">
+        <caption class="sr-only">Ticket types and prices</caption>
+        <thead>
+          <tr>
+            <th scope="col">Ticket Type</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Adult Guest</td>
+            <td>$18.00</td>
+          </tr>
+          <tr>
+            <td>Adult Member</td>
+            <td>$16.20</td>
+          </tr>
+          <tr>
+            <td>Student Member</td>
+            <td>$13.50</td>
+          </tr>
+          <tr>
+            <td>Child (under 12)</td>
+            <td>$9.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Museum Hours</h2>
+      <table class="info-table">
+        <caption class="sr-only">Museum hours and days of operation</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday - Thursday</td>
+            <td>10:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>10:00 AM - 9:00 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday - Sunday</td>
+            <td>10:00 AM - 7:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Find Us</h2>
+      <div id="map" class="leaflet-map"></div>
+
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>1060 Morewood Avenue, Pittsburgh, PA 15213</p>
+      <p>Phone: <a href="tel:+14125551234">(412) 555-1234</a></p>
+      <p>Email: <a href="mailto:hello@monomuse.org">hello@monomuse.org</a></p>
+      <p class="copyright">&copy; 2026 MonoMuse Contemporary Art Museum. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>

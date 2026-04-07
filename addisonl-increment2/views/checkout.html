@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your name">
-    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
-    <meta name="description" content="MonoMuse website redesign project">
-    <link rel="stylesheet" href="../static/style.css">
-    <title>MonoMuse</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="Checkout">
+  <title>Checkout</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <header>
-        <h1>Checkout</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="explore.html">Explore</a>
-            <a href="exhibitions.html">Exhibitions</a>
-            <a href="tickets.html">Buy Tickets</a>
-            <a href="checkout.html">Checkout</a>
-        </nav>
-    </header>
-    <div class="main">
-        
-    </div>
-    <footer>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a id="navselected" href="checkout.html">Checkout</a>
+    </nav>
+  </header>
 
-    </footer>
+  <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+
+  <main>
+    <h1>Checkout</h1>
+
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="quantity">Ticket Quantity:</label><br>
+      <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MonoMuse. All rights reserved.</p>
+  </footer>
 </body>
 </html>

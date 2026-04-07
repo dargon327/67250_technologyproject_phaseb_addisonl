@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse website redesign project">
+  <title>MonoMuse</title>
+    
+  <link rel="stylesheet" href="./static/style.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script src="./static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="./static/logo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar" id="navBar">
+        <a href="index.html">Home</a>
+        <a href="views/explore.html">Explore</a>
+        <a href="views/exhibitions.html">Exhibitions</a>
+        <a href="views/tickets.html">Tickets</a>
+        <a href="views/checkout.html">Checkout</a>
+        <button class="icon" type="button" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <main class="main">
+      <h2 id="greeting">Welcome to MonoMuse</h2>
+
+      <p>
+        MonoMuse is a contemporary museum dedicated to exploring the intersection of art,
+        technology, and human creativity. Through immersive exhibitions, interactive
+        installations, and rotating collections, MonoMuse invites visitors to discover how
+        digital innovation is transforming the way we create, experience, and understand art.
+        Whether you are a first-time visitor or a returning member, our exhibitions offer new
+        perspectives on the role of technology in culture and everyday life.
+      </p>
+
+      <a class="cta" href="views/tickets.html">Buy Tickets</a>
+
+      <p id="shortIntro">
+        Discover immersive exhibitions, hands-on experiences, and events designed to inspire curiosity.
+      </p>
+
+      <p id="longIntro">
+        At MonoMuse, visitors can explore featured artists, view interactive installations, and learn how
+        technology continues to shape contemporary creative expression. Our museum experience is designed
+        to be welcoming, educational, and engaging for students, families, artists, and curious visitors alike.
+      </p>
+
+      <button id="readMore" type="button">Read More</button>
+      <button id="readLess" type="button">Read Less</button>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
